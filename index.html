@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,600;1,400&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Four card feature section</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    :root {
+      --RED: hsl(0, 78%, 62%);
+      --CYAN: hsl(180, 62%, 55%);
+      --ORANGE: hsl(34, 97%, 64%);
+      --BLUE: hsl(212, 86%, 64%);
+
+      --DARK-BLUE: hsl(234, 12%, 34%);
+      --GRAY-BLUE: hsl(229, 6%, 66%);
+      --LITE-GRAY: hsl(0, 0%, 98%);
+    }
+
+    html {
+      font-size:16px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: var(--LITE-GRAY);
+      color: var(--GRAY-BLUE);
+      font-weight: 400;
+    }
+
+    .container {
+      width: 85%;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .hero-heading {
+      font-size: 1.5rem;
+      font-weight: 200;
+      color: var(--DARK-BLUE);
+      margin: 0;
+    }
+
+    .hero-sub-heading {
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: var(--DARK-BLUE);
+      margin: 0.15rem 0 0 0;
+    }
+
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+    }
+
+    .feature {
+      font-size: 1.3rem;
+      padding: 1.2rem;
+      background-color: #fff;
+      box-shadow: 0px 5px 15px hsla(212, 86%, 64%, 0.198);
+      border-radius: 5px;
+      width: 90%;
+      height: 180px;
+      text-align: left;
+      margin:0 auto;
+    }
+
+    .feature-head {
+      color: var(--DARK-BLUE);
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .feature-text {
+      margin: 0.35rem 0 0 0;
+      font-size: 0.65em;
+      opacity: 0.9;
+      line-height: 1.35rem;
+    }
+
+    .cyan {
+      background-image: url('./images/icon-supervisor.svg');
+      background-position: bottom 20px right 20px;
+      background-repeat: no-repeat;
+      border: solid;
+      border-top-color: var(--CYAN);
+      border-width: 5px 0 0 0;
+     }
+    .red {
+      background-image: url('./images/icon-team-builder.svg');
+      background-position: bottom 20px right 20px;
+      background-repeat: no-repeat;
+      border: solid;
+      border-top-color: var(--RED);
+      border-width: 5px 0 0 0;
+     }
+    .orange {
+      background-image: url('./images/icon-karma.svg');
+      background-position: bottom 20px right 20px;
+      background-repeat: no-repeat;
+      border: solid;
+      border-top-color: var(--ORANGE);
+      border-width: 5px 0 0 0;
+     }
+    .blue {
+      background-image: url('./images/icon-calculator.svg');
+      background-position: bottom 20px right 20px;
+      background-repeat: no-repeat;
+      border: solid;
+      border-top-color: var(--BLUE);
+      border-width: 5px 0 0 0;
+     }
+
+     .center-ft {
+      display: flex;
+      flex-direction: column;
+      gap: inherit;
+     }
+
+     @media (min-width: 1440px) {
+
+      .container {
+        width: 75%;
+        padding-top: 3rem;
+      }
+      .features {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .features > * {
+        width: 28%;
+      }
+
+      .hero-text {
+        width: 50ch;
+        margin: 0 auto;
+        margin-top: 1.4rem;
+      }
+
+      .hero-heading, .hero-sub-heading {
+        font-size: 2rem;
+      }
+
+     }
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <h1 class="hero-heading">Reliable, efficient delivery </h1>
+    <h2 class="hero-sub-heading">Powered by Technology</h2>
+    <p class="hero-text">Our Artificial Intelligence powered tools use millions of project data points 
+      to ensure that your project is successful</p>
+
+    <div class="features">
+      <div class="feature cyan">
+        <p class="feature-head">Supervisor</p>
+        <p class="feature-text">Monitors activity to identify project roadblocks</p>
+      </div>
+
+      <div class="center-ft">
+        <div class="feature red">
+          <p class="feature-head">Team Builder</p>
+          <p class="feature-text">Scans our talent network to create the optimal team for your project</p>
+        </div>
+
+        <div class="feature orange">
+          <p class="feature-head">Karma</p>
+          <p class="feature-text">Regularly evaluates our talent to ensure quality</p>
+        </div>
+      </div>
+
+      <div class="feature blue">
+        <p class="feature-head">Calculator</p>
+        <p class="feature-text"> Uses data from past projects to provide better delivery estimates</p>
+      </div>
+    </div>
+  </div>
+
+  
+  <footer>
+    <p class="attribution" style="margin-top: 3rem;">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Tabe Success Nse (Tabebash)</a>.
+    </p>
+  </footer>
+</body>
+</html>
